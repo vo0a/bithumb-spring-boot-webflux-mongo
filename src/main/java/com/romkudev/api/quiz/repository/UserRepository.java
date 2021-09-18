@@ -10,6 +10,8 @@ import java.util.Optional;
 public interface UserRepository extends ReactiveMongoRepository<User, Long> {
 
     Optional<User> findByAlias(String alias);
+
     Flux<User> findAll(); // 복수
+
     Mono<User> findByUserid(); // 단일
 }
